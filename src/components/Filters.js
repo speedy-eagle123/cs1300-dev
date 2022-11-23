@@ -4,13 +4,17 @@ export default function Filters({
     tempType,
     setTempType,
     drinkType,
-    setDrinkType
+    setDrinkType,
+    setSearch
 }) {
-    console.log(tempType === 'all')
-    console.log(drinkType)
-
     return (
         <div id={styles.container}>
+            <input
+                id={styles.search}
+                type='text'
+                placeholder='Search Drinks'
+                onChange={(e) => setSearch(e.target.value)}
+            />
             <h1>Tempature</h1>
             <div>
                 <label>

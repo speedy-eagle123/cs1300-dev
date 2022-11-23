@@ -6,18 +6,40 @@ import { useEffect, useState } from "react";
 export default function Body() {
     const [tempType, setTempType] = useState('all')
     const [drinkType, setDrinkType] = useState('all')
+    const [search, setSearch] = useState()
     const [items, setItems] = useState(allItems)
+
+    const filterItems = (tmp) => {
+        return tmp.filter((item) => {
+            const isHot = tempType === 'all' || tempType === 'hot'
+            const isCoffee = drinkType === 'all' || drinkType === 'coffee'
+
+            return item.isCoffee === isCoffee && item.isHot === isHot
+        })
+    }
 
     useEffect(() => {
         setItems(
-            allItems.filter((item) => {
-                const isHot = tempType === 'all' || tempType === 'hot'
-                const isCoffee = drinkType === 'all' || drinkType === 'coffee'
-
-                return item.isCoffee === isCoffee && item.isHot === isHot
-            })
+            filterItems(allItems)
         )
     }, [tempType, drinkType])
+
+    useEffect(() => {
+        if (!search) {
+            setItems(
+                filterItems(allItems)
+            )
+            return
+        }
+
+        const passesSearch = allItems.filter((item) => {
+            return item.name.toLowerCase().includes(search.toLowerCase())
+        })
+
+        setItems(
+            filterItems(passesSearch)
+        )
+    }, [search])
 
     return (
         <div id={styles.container}>
@@ -26,6 +48,7 @@ export default function Body() {
                 setTempType={setTempType}
                 drinkType={drinkType}
                 setDrinkType={setDrinkType}
+                setSearch={setSearch}
             />
 
             <ItemList items={items} />
@@ -42,7 +65,7 @@ const allItems = [
         isCoffee: true
     },
     {
-        name: 'Hot Coffee',
+        name: 'Hot Latte',
         price: 1,
         image: 'https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee.png',
         isHot: true,
