@@ -1,0 +1,9 @@
+#container {
+    width: 400px;
+    border: solid 2px green;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-left: 15px;
+    height: 320px;
+}
