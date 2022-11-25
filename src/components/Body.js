@@ -65,7 +65,7 @@ export default function Body() {
     useEffect(() => {
         if (!search || search === '') {
             setItems(
-                filterItems(allItems)
+                sortItems(filterItems(allItems))
             )
             return
         }
@@ -75,7 +75,7 @@ export default function Body() {
         })
 
         setItems(
-            filterItems(passesSearch)
+            sortItems(filterItems(passesSearch))
         )
     }, [search])
 
