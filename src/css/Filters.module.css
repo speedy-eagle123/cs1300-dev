@@ -4,15 +4,15 @@
     margin-left: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 320px;
+    height: 390px;
     background-color: whitesmoke;
     padding-top: 30px;
+    width: 250px;
 }
 
 #search {
     width: 200px;
     height: 30px;
-    margin-bottom: 20px;
     border: solid 1px lightgray;
     border-radius: 5px;
     padding-left: 15px;
@@ -24,5 +24,33 @@
 }
 
 #container h1 {
-    margin-top: 0;
+    margin-top: 20px;
+}
+
+#reset {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#reset button {
+    width: 120px;
+    height: 30px;
+    border: solid green 2px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+#reset button:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+#container input {
+    accent-color: green
 }

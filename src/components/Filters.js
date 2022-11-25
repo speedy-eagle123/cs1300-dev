@@ -3,13 +3,16 @@ import styles from '../css/Filters.module.css'
 export default function Filters({
     tempType,
     setTempType,
-    drinkType,
-    setDrinkType,
-    setSearch
+    sortBy,
+    setSortBy,
+    setSearch,
+    search,
+    handleReset
 }) {
     return (
         <div id={styles.container}>
             <input
+                value={search}
                 id={styles.search}
                 type='text'
                 placeholder='Search Drinks'
@@ -47,36 +50,41 @@ export default function Filters({
                     Cold</label>
             </div>
 
-            <h1>Drink Type</h1>
+            <h1>Sort By</h1>
             <div>
                 <label>
                     <input
-                        checked={drinkType === 'all'}
+                        checked={sortBy === 'Alphabetical'}
                         type='radio'
-                        name="All"
-                        onChange={() => setDrinkType('all')}
+                        name="Alphabetical"
+                        onChange={() => setSortBy('Alphabetical')}
                     />
-                    All</label>
+                    Alphabetical</label>
             </div>
             <div>
                 <label>
                     <input
-                        checked={drinkType === 'coffee'}
+                        checked={sortBy === 'Price Low to High'}
                         type='radio'
-                        name="Coffee"
-                        onChange={() => setDrinkType('coffee')}
+                        name="Price Low to High"
+                        onChange={() => setSortBy('Price Low to High')}
                     />
-                    Coffee</label>
+                    Price Low to High</label>
             </div>
             <div>
                 <label>
                     <input
-                        checked={drinkType === 'tea'}
+                        checked={sortBy === 'Price High to Low'}
                         type='radio'
-                        name="Tea"
-                        onChange={() => setDrinkType('tea')}
+                        name="Price High to Low"
+                        onChange={() => setSortBy('Price High to Low')}
                     />
-                    Tea</label>
+                    Price High to Low</label>
+            </div>
+            <div id={styles.reset}>
+                <button onClick={handleReset}>
+                    Reset
+                </button>
             </div>
         </div>
     )
