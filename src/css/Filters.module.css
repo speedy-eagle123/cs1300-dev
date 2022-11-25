@@ -54,3 +54,10 @@
 #container input {
     accent-color: green
 }
+
+@media screen and (max-width: 950px) {
+    #container {
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+}

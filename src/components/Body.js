@@ -86,7 +86,7 @@ export default function Body() {
     }, [sortBy])
 
     return (
-        <div id={styles.container} style={{ flexDirection: 'column' }}>
+        <div id={styles.wrapper}>
             <div id={styles.note}>
                 <h4>Note: due to recent supply chain issues, you may only purchase one of a given drink. Sorry for the inconvience.</h4>
             </div>
