@@ -5,19 +5,44 @@ export default function Filters({
     setTempType,
     sortBy,
     setSortBy,
-    setSearch,
-    search,
+    setHasMilk,
+    hasMilk,
     handleReset
 }) {
     return (
         <div id={styles.container}>
-            <input
-                value={search}
-                id={styles.search}
-                type='text'
-                placeholder='Search Drinks'
-                onChange={(e) => setSearch(e.target.value)}
-            />
+            <h1>Contains Milk</h1>
+            <div>
+                <label>
+                    <input
+                        checked={hasMilk === 'all'}
+                        type='radio'
+                        name="milk-all"
+                        onChange={() => setHasMilk('all')}
+                    />
+                    All</label>
+            </div>
+            <div>
+                <label>
+                    <input
+                        checked={hasMilk === 'yes'}
+                        type='radio'
+                        name="Yes"
+                        onChange={() => setHasMilk('yes')}
+                    />
+                    Yes</label>
+            </div>
+            <div>
+                <label>
+                    <input
+                        checked={hasMilk === 'no'}
+                        type='radio'
+                        name="No"
+                        onChange={() => setHasMilk('no')}
+                    />
+                    No</label>
+            </div>
+
             <h1>Tempature</h1>
             <div>
                 <label>
