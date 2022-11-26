@@ -16,7 +16,7 @@ and customers can skip the morning rush lines!
 
 Here is a rough tree diagram of the components
 
-App
+App <br/>
 &nbsp; Test
 
 ### How Data is Passed Down Through Components
