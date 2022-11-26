@@ -16,19 +16,13 @@ and customers can skip the morning rush lines!
 
 Here is a rough tree diagram of the components
 
-* Item 1
-* Item 2
-* Item 3
-  * Sub Item A
-  * Sub Item B
-
-App <br/>
-&nbsp;&nbsp; Header<br/>
-&nbsp;&nbsp; Body<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; Filters<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; Cart<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; ItemList<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item<br/>
+* App
+  * Header
+  * Body
+    * Filters
+    * Cart
+    * ItemList
+      * Item
 
 ### How Data is Passed Down Through Components
 
