@@ -5,7 +5,7 @@
 
 ### Goal and Value of the Application
 
-Jeff's Coffee Shop is an up and coming cafe in the providence area. In an effort to drum up some new business, Jeff
+Jeff's Coffee Shop is an up and coming cafe in the Providence area. In an effort to drum up some new business, Jeff
 has been hard at work building out a sleek new website to offer online ordering. Using the new website, customers
 can now purchase drinks online and have them ready when they get to the shop. Jeff can now bring in more revenue
 and customers can skip the morning rush lines!
