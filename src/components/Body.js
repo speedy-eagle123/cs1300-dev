@@ -27,6 +27,7 @@ export default function Body() {
         setTempType('all')
         setHasMilk('all')
         setSortBy('Alphabetical')
+        // setCart(new Set())
 
         setItems(
             sortItems(filterItems(allItems, true), 'Alphabetical')
