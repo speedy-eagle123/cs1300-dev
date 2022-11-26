@@ -17,12 +17,12 @@ and customers can skip the morning rush lines!
 Here is a rough tree diagram of the components
 
 App <br/>
-&nbsp; Header
-&nbsp; Body
-&nbsp;&nbsp; Filters
-&nbsp;&nbsp; Cart
-&nbsp;&nbsp; ItemList
-&nbsp;&nbsp;&nbsp; Item
+&nbsp; Header<br/>
+&nbsp; Body<br/>
+&nbsp;&nbsp; Filters<br/>
+&nbsp;&nbsp; Cart<br/>
+&nbsp;&nbsp; ItemList<br/>
+&nbsp;&nbsp;&nbsp; Item<br/>
 
 ### How Data is Passed Down Through Components
 
