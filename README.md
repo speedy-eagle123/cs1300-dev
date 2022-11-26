@@ -1,7 +1,7 @@
 # Development
 
 ### Link to Deployed Website
-If you used the stencil code, this is <a>https://speedy-eagle123.github.io/cs1300-dev/</a>
+<a>https://speedy-eagle123.github.io/cs1300-dev/</a>
 
 ### Goal and Value of the Application
 
