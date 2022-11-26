@@ -16,6 +16,12 @@ and customers can skip the morning rush lines!
 
 Here is a rough tree diagram of the components
 
+* Item 1
+* Item 2
+* Item 3
+  * Sub Item A
+  * Sub Item B
+
 App <br/>
 &nbsp;&nbsp; Header<br/>
 &nbsp;&nbsp; Body<br/>
