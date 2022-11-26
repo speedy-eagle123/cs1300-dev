@@ -27,27 +27,31 @@ export default function Body() {
         setTempType('all')
         setSortBy('Alphabetical')
         setSearch('')
-        setItems(allItems)
+        setItems(
+            sortItems(filterItems(allItems, 'all'), 'Alphabetical')
+        )
     }
 
-    const filterItems = (tmp) => {
+    const filterItems = (tmp, override = null) => {
+        const t = override ? override : tempType
         return tmp.filter((item) => {
-            const isHot = tempType === 'all' || tempType === 'hot'
-
+            if (t === 'all') return item
+            const isHot = t === 'hot'
             return item.isHot === isHot
         })
     }
 
-    const sortItems = (itemsToSort) => {
+    const sortItems = (itemsToSort, override = null) => {
         let res = [...itemsToSort]
+        const s = override ? override : sortBy
 
-        if (sortBy === 'Alphabetical') {
+        if (s === 'Alphabetical') {
             res.sort((a, b) => {
                 const textA = a.name.toUpperCase();
                 const textB = b.name.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
             });
-        } else if (sortBy === 'Price Low to High') {
+        } else if (s === 'Price Low to High') {
             res.sort((a, b) => a.price - b.price)
         } else {
             res.sort((a, b) => b.price - a.price)
@@ -58,7 +62,7 @@ export default function Body() {
 
     useEffect(() => {
         setItems(
-            filterItems(allItems)
+            sortItems(filterItems(allItems))
         )
     }, [tempType])
 
