@@ -12,6 +12,12 @@ and customers can skip the morning rush lines!
 
 ### Usability Principles Considered
 
+The primary usability principle I took into consideration was visual hierarchy. This design principle is most prominant in the item component. I decided to style this component such that the image was the most visually notable part of the component. Since Jeff is trying to sell more coffee, being able to show off the look of his drinks is quite important. By drawing the users attention straight to the delicious images, we can hopefully increase Jeff's sales. <br/>
+
+I also addressed visual hierarchy by making the site adapt to screen sizes. When the window width reaches a certain value, the component layout switches to display the filter view on top of the item list. This was intended to accomodate users of multiple devices. Furthermore, I decided to stack the filters on top of the item list, instead of the other way around, to ensure that the filters are not lost below the content. This is a nice feature of the site, and I didn't want it to go unnoticed.<br/>
+
+I also took into consideration the principle of contrast when designing the background of the Filters and Item components. By making the background an off-white color, I am able to differentiate the components from the page and make them more noticable.
+
 ### Organization of Components
 
 Here is a rough tree diagram of the components
